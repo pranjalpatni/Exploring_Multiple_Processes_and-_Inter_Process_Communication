@@ -1,6 +1,6 @@
 # Exploring_Multiple_Processes_and-_Inter_Process_Communication
 
-Project Purpose:
+PROJECT PURPOSE:
 
 The purpose of the project is to make the students aware about the different processes that occur in a processor and how those processes communicate among themselves.
 The process of communication between the processes is called IPC (Inter Process Communication) and this project focuses on its implementation as to how to write codes to carry out the same.
@@ -24,7 +24,8 @@ e)	Interrupt handling
 
 f)	Memory protection 
 
-Project Implementation:
+
+PROJECT IMPLEMENTATION:
 
 I wrote my project in C language. The implementation was carried as follows:
 
@@ -50,7 +51,8 @@ An integer ‘instnum’ keeps track of the number of instructions which have be
 
 2-	System/Kernel mode: When ISR (Interrupt Service Routine) is running and the memory from 1000 to 1999 can be accessed
 
-How To Execute:
+
+HOW TO EXECUTE:
 
 1- Compile using:
 	gcc IPC.c -o IPC
