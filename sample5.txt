@@ -1,0 +1,279 @@
+.0	//Program to find and print the difference between two numbers: difference = (first number) - (second number)
+1	//Load 84
+84
+9	//Print T
+2
+1	//Load 104
+104
+9	//Print h
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 32 
+32
+9	//Print space
+2
+1	//Load 102
+102
+9	//Print f
+2
+1	//Load 105
+105
+9	//Print i
+2
+1	//Load 114
+114
+9	//Print r
+2
+1	//Load 115
+115
+9	//Print s
+2
+1	//Load 116
+116
+9	//Print t
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load 110
+110
+9	//Print n
+2
+1	//Load 117
+117
+9	//Print u
+2
+1	//Load 109
+109
+9	//Print m
+2
+1	//Load 98
+98
+9	//Print b
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 114
+114
+9	//Print r
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load 105
+105
+9	//Print i
+2
+1	//Load 115
+115
+9	//Print s
+2
+1	//Load 58
+58
+9	//Print :
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load NUMBER 30
+30
+9	//Print 30
+1
+14	//Copy From AC to X
+1	//Load 10
+10
+9	//Print newline
+2
+1	//Load 84
+84
+9	//Print T
+2
+1	//Load 104
+104
+9	//Print h
+2
+1	//Load 84
+101
+9	//Print e
+2
+1	//Load 32 
+32
+9	//Print space
+2
+1	//Load 115
+115
+9	//Print s
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 99
+99
+9	//Print c
+2
+1	//Load 111
+111
+9	//Print o
+2
+1	//Load 110
+110
+9	//Print n
+2
+1	//Load 100
+100
+9	//Print d
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load 110
+110
+9	//Print n
+2
+1	//Load 117
+117
+9	//Print u
+2
+1	//Load 109
+109
+9	//Print m
+2
+1	//Load 98
+98
+9	//Print b
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 114
+114
+9	//Print r
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load 105
+105
+9	//Print i
+2
+1	//Load 115
+115
+9	//Print s
+2
+1	//Load 58
+58
+9	//Print :
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load NUMBER 5
+5
+9	//Print 5
+1
+16	//Copy Ac to Y
+1	//Load 10
+10
+9	//Print new line
+2
+1	//Load 84
+84
+9	//Print T
+2
+1	//Load 104
+104
+9	//Print h
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load 100
+100
+9	//Print d
+2
+1	//Load 105
+105
+9	//Print i
+2
+1	//Load 102
+102
+9	//Print f
+2
+1	//Load 102
+102
+9	//Print f
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 114
+114
+9	//Print r
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 110
+110
+9	//Print n
+2
+1	//Load 99
+99
+9	//Print c
+2
+1	//Load 101
+101
+9	//Print e
+2
+1	//Load 32
+32
+9	//Print space
+2
+1	//Load 105
+105
+9	//Print i
+2
+1	//Load 115
+115
+9	//Print s
+2
+1	//Load 58
+58
+9	//Print :
+2
+1	//Load 32
+32
+9	//Print space
+2
+15	//Copy value from X to AC
+13	// AC-Y=AC
+9	//Print AC
+1
+1	//Load 10
+10
+9	//Print new line
+2
+50	//End
+
+.1000
+30
