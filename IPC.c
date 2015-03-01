@@ -60,7 +60,6 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                     timerx = timerx + timeIncrement;
                     rw = 'w';
                     userSP = SP;
-                    //printf("userSP: %d\n",userSP);
                     userPC = PC;
                     SP = 2000;
                     PC = 1000;
@@ -76,15 +75,12 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                     rw = 'r';
                     write(pipec2m[1], &rw, sizeof (char));
                     write(pipec2m[1], &PC, sizeof (int));
-                    // printf("PC: %d\n", PC);
                     read(pipem2c[0], &IR, sizeof (int));
-                    //  printf("Instruction register: %d\n", IR);
                     if (IR != 30) {
                         PC++;
                     }
                     if (mode == 0) //Increment the counter for counting number of executions in user mode only
                         instnum++;
-                    // printf("Increment counter: %d\n",instnum);
                     switch (IR) { //Find the instruction
                         case 1: //Load value into AC
                             rw = 'r';
@@ -100,8 +96,6 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                             write(pipec2m[1], &PC, sizeof (int));
                             PC = PC + 1;
                             read(pipem2c[0], &address, sizeof (int));
-                            // printf("ADDRESS:%d\n",address);
-                            // printf("Mode: %d\n",mode);
                             if (address < 1000 || mode == 1) {
                                 write(pipec2m[1], &rw, sizeof (char));
                                 write(pipec2m[1], &address, sizeof (int));
@@ -126,7 +120,6 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                                     write(pipec2m[1], &address, sizeof (int));
                                     read(pipem2c[0], &val, sizeof (int));
                                     AC = val;
-                                    //printf("AC: %d",AC);
                                 } else {
                                     printf("Memory violation! %d\n", address);
                                     break;
@@ -148,7 +141,6 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                                 write(pipec2m[1], &address, sizeof (int));
                                 read(pipem2c[0], &val, sizeof (int));
                                 AC = val;
-                                //printf("AC: %d",AC);
                             } else {
                                 printf("Memory violation! %d\n", address);
                             }
@@ -165,7 +157,6 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                                 write(pipec2m[1], &address, sizeof (int));
                                 read(pipem2c[0], &val, sizeof (int));
                                 AC = val;
-                                //printf("AC: %d",AC);
                             } else {
                                 printf("Memory violation! %d\n", address);
                             }
@@ -299,7 +290,6 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                             if (address < 1000 || mode == 1) {
                                 rw = 'w';
                                 SP--;
-                                //printf("SP: %d\n",SP);
                                 write(pipec2m[1], &rw, sizeof (char));
                                 write(pipec2m[1], &SP, sizeof (int));
                                 write(pipec2m[1], &PC, sizeof (int));
@@ -331,17 +321,13 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                             SP--;
                             write(pipec2m[1], &rw, sizeof (char));
                             write(pipec2m[1], &SP, sizeof (int));
-                            // printf("SP pushed************ %d",SP);
                             write(pipec2m[1], &AC, sizeof (int));
-                            // printf("AC pushed************ %d",AC);
                             break;
                         case 28: //Pop from stack into AC
                             rw = 'r';
                             write(pipec2m[1], &rw, sizeof (char));
                             write(pipec2m[1], &SP, sizeof (int));
-                            //printf("SP pop************ %d",SP);
                             read(pipem2c[0], &AC, sizeof (int));
-                            //printf("AC popped************ %d",AC);
                             SP++;
                             break;
                         case 29: //Set system mode, switch stack, push SP and PC, set new SP and PC
@@ -354,30 +340,22 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                             SP--;
                             write(pipec2m[1], &rw, sizeof (char));
                             write(pipec2m[1], &SP, sizeof (int));
-                            //printf("The system SP during 29 is: %d\n", SP);
                             write(pipec2m[1], &userSP, sizeof (int));
-                            //printf("SP pushed: %d\n", userSP);
                             SP--;
                             write(pipec2m[1], &rw, sizeof (char));
                             write(pipec2m[1], &SP, sizeof (int));
-                            //printf("The system SP during 29 is: %d\n", SP);
                             write(pipec2m[1], &userPC, sizeof (int));
-                            //printf("PC pushed: %d\n", userPC);
                             break;
                         case 30: //Restore registers, set user mode
                             mode = 0;
                             rw = 'r';
                             write(pipec2m[1], &rw, sizeof (char));
                             write(pipec2m[1], &SP, sizeof (int));
-                            //printf("The system SP is: %d\n", SP);
                             read(pipem2c[0], &userPC, sizeof (int));
-                            //printf("The PC is: %d\n", userPC); /*test*/
                             SP++;
                             write(pipec2m[1], &rw, sizeof (char));
                             write(pipec2m[1], &SP, sizeof (int));
-                            //printf("The system SP is: %d\n", SP);
                             read(pipem2c[0], &userSP, sizeof (int));
-                            //printf("The SP is: %d\n", userSP);
                             SP++;
                             PC = userPC;
                             SP = userSP;
@@ -404,11 +382,8 @@ int main(int argc, char *argv[]) { //Takes 3 command line arguments: <.out file>
                     read(pipec2m[0], &address1, sizeof (int));
                     read(pipec2m[0], &val1, sizeof (int));
                     memory[address1] = val1;
-                    //printf("*******MEMMORY ADDRESS WRITTEN******%d \n",address1);
-                    //printf("*******VALUE AT MEMMORY ADDRESS WRITTEN*****%d \n",val1);
                 } else if (mrw == 'r') { //For reading from memory
                     read(pipec2m[0], &address1, sizeof (int));
-                    //printf("Address value is: %d\n",address);
                     val1 = memory[address1];
                     write(pipem2c[1], &val1, sizeof (int));
                 } else if (mrw == 'e') {
