@@ -49,3 +49,14 @@ An integer ‘instnum’ keeps track of the number of instructions which have be
 1-	User mode: When program is running and only the memory from 0 to 999 can be accessed
 
 2-	System/Kernel mode: When ISR (Interrupt Service Routine) is running and the memory from 1000 to 1999 can be accessed
+
+How To Execute:
+
+1- Compile using:
+	gcc IPC.c -o IPC
+2- Run:
+	./IPC sample5.txt 20
+
+Note:
+
+- The value of the timer can be chosen arbitrarily. 
