@@ -55,8 +55,11 @@ An integer ‘instnum’ keeps track of the number of instructions which have be
 HOW TO EXECUTE:
 
 1- Compile using:
+
 	gcc IPC.c -o IPC
+	
 2- Run:
+
 	./IPC sample5.txt 20
 
 Note:
