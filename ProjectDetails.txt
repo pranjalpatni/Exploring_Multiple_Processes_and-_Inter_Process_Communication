@@ -2,7 +2,7 @@ PROJECT DETAILS
 
 CPU
    It has these registers:  PC, SP, IR, AC, X, Y.
-   It supports the instructions shown on the next page of this document.
+   It supports the instructions shown below.
    It runs the user program at address 0.
    Instructions are fetched into the IR from memory.
    Each instruction is executed before the next instruction is fetched.
