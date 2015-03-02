@@ -2,7 +2,6 @@
 
 PROJECT PURPOSE:
 
-The purpose of the project is to make the students aware about the different processes that occur in a processor and how those processes communicate among themselves.
 The process of communication between the processes is called IPC (Inter Process Communication) and this project focuses on its implementation as to how to write codes to carry out the same.
 The project teaches about following important concepts:
 
